@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¿Cuál es tu nivel de estrés?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container" id="inicio">
+    <h1>¿Cuál es tu nivel de estrés?</h1>
+    <p>Descúbrelo en 2 minutos con este test rápido y personalizado.</p>
+    <p>Al terminar, <strong>recibirás una guía gratuita con técnicas de respiración</strong> para calmar tu mente.</p>
+
+    <input type="text" id="nombre" placeholder="Tu nombre" required />
+    <input type="tel" id="whatsapp" placeholder="WhatsApp (ej: 521234567890)" required />
+
+    <button onclick="mostrarTest()">Comenzar test →</button>
+  </div>
+
+  <!-- Contenedor del test (una pregunta a la vez) -->
+  <div class="container" id="test-container" style="display:none;">
+    <div id="progress">Pregunta <span id="current">1</span> de 7</div>
+    <div id="question"></div>
+    <div id="options"></div>
+    <button id="next-btn" onclick="siguientePregunta()">Siguiente</button>
+  </div>
+
+  <!-- Resultado final -->
+  <div class="container" id="resultado" style="display:none;">
+    <h2>Tu nivel de estrés es: <span id="nivel"></span></h2>
+    <p id="mensaje"></p>
+    <p>🎯 Esta guía te ayudará a sentirte mejor:</p>
+    <a href="guia-respiracion.pdf" target="_blank" class="btn-pdf">
+  📥 Descargar Guía Gratis: "Respira, esto también pasará"
+    </a>
+    <p>o envíame el resultado y el PDF directo a mi WhatsApp:</p>
+    <a id="btn-whatsapp" href="#" target="_blank" class="btn">💬 Enviarme por WhatsApp</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
